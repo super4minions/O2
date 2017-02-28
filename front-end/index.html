@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script type="text/javascript" src="sheet.js"></script> 
+  <title></title>
+</head>
+<body>
+<div>
+<form action="/sheet" method="GET" id="form">
+First name: 
+<input type="text" name="username" required="">
+<br>
+Phone:
+<input type="text" name="phone" required="">
+<br>
+<button id="btn" onclick="sheet()"> submit</button>
+</form>
+</div>
+
+
+<div >
+<label> ffffffff</label>
+
+</div>
+
+</body>
+</html>
+
+
+<style>
+.textarea{
+  width: 500px;
+height: 100px;
+
+}
+.form-button{
+
+margin-top: 20px;
+margin: 20px;
+  font-size: 18px;
+}
+</style>
+
+<script type="text/javascript">
+document.getElementById("btn").onclick = function(){
+    document.getElementById("form").style.display = "none";
+  }
+</script>
