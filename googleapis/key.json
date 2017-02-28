@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "o2-facebook",
+  "private_key_id": "38783eb5737ed802165c18af2d754142740ae68e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDSQ4b0GKaMyf4/\nBOvFrlcajxrDithA1X3Xvx3TtNHorjlolnW6VyRSINk9Eixz5kS4h2SEhv6Ilsio\nnOTZ9k+00A1qcQnbcwviYpDIk95CI2g67iMzksM9aykqcHpnym7dIjmwt5KM8gkj\nkm9J5W0PfPjvFtrHUI7soEM3dSaMnZ4l16WheluNiveSqstJP2sZwCSB+soOOVlr\nMWsiNefy/hf1sxuuvr1S4fien2znbrlfjzZdwE20eXCY0PvKcvMbUEFG2zqm1721\nyOY9VJCPzvgy0eomPt4R3n8pDAeMYmynUB2FGJl7yXbDafbHY4T3RyAm+/wTP+iY\nyim6wh1lAgMBAAECggEAV5zjotqSq5+PXVsDkz9t9BclI827BmjvIvLzzr9NqBLQ\nwQ/QxnCBJeeiHZxxAWo1wF5KOB63+No7ima1xUypMcJvlKa9YL+zeAVyJuHWfuCa\nEdQgvuCske8RHCn6Fz12rJYSS9xyKGDCBhyCWtxKcWW1pIp1Zw/ePiMZXwZlpblW\nRxqwqUUXRtEoUwefBHzzeedN4OQWXIsF4NphdN9vFCP1uk2MOiecYbNmHzLCXqLU\ngEfh2FksbiOhYK6nMbw3p4JnZZ4QvehkGjEqqYEbwHbCoqT83J0IGM9ZDqlmhBa8\nGknwqGjFM6lrBuMN3XehyXFdSDUG8rPtmpF1bn6zkQKBgQDsPwB+qp2vyQHcjrXi\nP9X0smZd4+dWeXr16tYU9xzPCZzqC9ZPf4X6X13A40ZTPQTXZqsYkstFlrhwi5Rv\nnV0xh6212iEU+wXrYflV84RmoGo/OBG4Z6+6avh3PxaaTkU09rV78WY5hkP4sNwH\nugeEOPcBXmj4WOdbWe6xV9E00wKBgQDj2FtpEu6D1UF0XzCzYDhz5u5O4k3hcduA\nhrEJJ3POS1V2YFN0oQe6RuCAmpqYSK6f+9mPOPxpWvzjqaQeYLm4/f95sBj+0sUE\nEDCQOc2283UK7/RvE4y7k8eaNoHFdjy21ih1iDV9p1Aur51gQRfDYuZ/9smx3zeW\nhYzWK3rh5wKBgB8o4CPU1R+OX5R7rjm9ObcgoKfZm3WoaDNvWfVB8qbMGco07Xtm\n0oEHexIp5+iqr6zJed+v3Oe8zW7quhVOqDAUOTE3KA3gXhOBxKU1jU0L83eLKass\n4dywpzzzMUQA9tfZgm5qlJUZxHVUvnC2dK9X5BxmG2pGL5246uaxMoLJAoGBALOL\nfx0h6grBNj858+qmXFYZGJnZA34wdsSlX0TTbhKWktYhuiIh8zD7QVaWflSakeFI\nWXzfbyimprnQqJ+3oSMCJRwDhO7psI8vItXEdzNATm87/+a4BSKbpaMEaObt8ZIy\n2NclauGFw03G3cFICi3R9cnI88/TEr7uprjusnrpAoGAC7/49nNnLAS1GkmZFpbx\nM1I+3xqgK9b8Y48kLRHF88KXxrGti99CbcodD4UUBhAS2hjIZTdk8fADJN91my68\n6T76hMqAiGKFmCQckhh/Jh3+LSSSPfi1z0vL7mYTO8oyMd4CR+xFpL6VCyJyjD55\nbFqbRwTRADdBHCIVL/8TmqY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "o2-facebook@o2-facebook.iam.gserviceaccount.com",
+  "client_id": "107052779634363120879",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/o2-facebook%40o2-facebook.iam.gserviceaccount.com"
+}
