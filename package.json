@@ -7,6 +7,7 @@
     "test": "node tests/runner.js",
     "start": "node server.js",
     "dev:test": "nodemon tests/runner.js"
+
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "googleapis": "^17.1.0"
   },
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "nodemon": "^1.11.0",
     "shot": "^3.4.0",
     "tape": "^4.6.3"
