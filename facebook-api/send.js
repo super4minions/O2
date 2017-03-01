@@ -1,7 +1,6 @@
 //require('dotenv').config();
 var https = require('https');
 var utils1 = require('./utils1.js');
-var read = require('./google-sheet-api/read.js')
 
 module.exports = function(fbid,sheet_info){
   // TODO: read the sheet and pass it throw sheet_info then check if the fb_id included or not
