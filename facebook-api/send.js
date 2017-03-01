@@ -1,16 +1,17 @@
-require('dotenv').config();
+//require('dotenv').config();
 var https = require('https');
-var utils = require('../utils1.js');
+var utils1 = require('./utils1.js');
 
 var postData = JSON.stringify({
-  recipient:{id:process.env.FACEBOOK_USER_ID},
-  message:{text:"hello, world!"}
+  recipient:{id:1502992586398188},
+  message:{text:"Im a bot ,hhhhh :)"}
+
 });
 
 var opts = {
   hostname: 'graph.facebook.com',
   port: 443,
-  path: `/v2.6/me/messages?access_token=${process.env.FACEBOOK_PAGE_ACCESS_TOKEN}`,
+  path: `/v2.6/me/messages?access_token=EAAS3JTmMICoBAIIo62bwQQk1hWjITKEURA416OEZAiDo7PhgtWoCnVrMXCnKBKYhAP0GU5oSykpmh4kLTP2wXQZBXlVlO44hmIYkguTdINk5lHz7kTNFRffmuOmdsWktOlqvPjiLyKj3WLbWjPKpejksGpPnlcAP4A41LRJgZDZD`,
   method: 'POST',
   headers: {'Content-Type': 'application/json'}
 };
@@ -22,7 +23,7 @@ var req = https.request(opts, (res) => {
       return res.end();
     }
 
-    console.log('body',body);
+    //console.log('body',body);
   });
 });
 
