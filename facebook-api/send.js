@@ -2,7 +2,7 @@
 var https = require('https');
 var utils1 = require('./utils1.js');
 
-module.exports = function(fbid,sheet_info){
+module.exports = function(fbid){
   // TODO: read the sheet and pass it throw sheet_info then check if the fb_id included or not
   // if (sheet_info.includes(fbid) == true){
   //   var postData = JSON.stringify({
