@@ -7,7 +7,6 @@ module.exports = {
     "POST /sheet": require("../google-sheet-api/sheet.js"),
     "GET /facebook" : (req, res) => {
     var challenge = utils1.parseUrl(req.url);
-    console.log("RESSSSS",challenge['hub.challenge']);
     res.end(challenge['hub.challenge']);
   },
   'POST /facebook': (req, res) => {
@@ -15,9 +14,7 @@ module.exports = {
       if(err) {
         console.log('err',err);
         return res.end('Error');
-      }
-      console.log('JSON.stringify(payload)',JSON.stringify(payload.entry));
-      
+      }      
       console.log('bes',payload.entry[0].messaging[0].message.text);
       res.end();
     });
