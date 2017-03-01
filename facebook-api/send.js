@@ -1,6 +1,6 @@
 require('dotenv').config();
 var https = require('https');
-var utils = require('../app/utils.js');
+var utils = require('../utils1.js');
 
 var postData = JSON.stringify({
   recipient:{id:process.env.FACEBOOK_USER_ID},
@@ -16,7 +16,7 @@ var opts = {
 };
 
 var req = https.request(opts, (res) => {
-  utils.parseBody(res, (err, body) => {
+  utils1.parseBody(res, (err, body) => {
     if(err) {
       console.log('err',err);
       return res.end();
