@@ -7,7 +7,6 @@
     "test": "node tests/runner.js",
     "start": "node server.js",
     "dev:test": "nodemon tests/runner.js"
-
   },
   "repository": {
     "type": "git",
