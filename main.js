@@ -1,4 +1,4 @@
-var router = require('./app/router.js');
+var router = require('./google-sheet-api/router.js');
 module.exports = function mainHandler(req, res) {
     var path = req.method + ' ' + req.url;
     try {

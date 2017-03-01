@@ -13,11 +13,10 @@ function parseBody(req, callback) {
         callback(undefined, qs.parse(body));
     });
 }
+
 module.exports = {
     parseBody: parseBody
 };
-
-
 // function creatsheet() {
 //     var https = require('https');
 //     var google = require('googleapis');
@@ -72,6 +71,4 @@ module.exports = {
 //         req.end();
 //     });
 //}
-module.exports = {
-    parseBody: parseBody
-};
+
