@@ -14,9 +14,7 @@ function parseBody(req, callback) {
     });
 }
 
-module.exports = {
-    parseBody: parseBody
-};
+
 // function creatsheet() {
 //     var https = require('https');
 //     var google = require('googleapis');
@@ -39,9 +37,28 @@ module.exports = {
 //             return;
 //         }
 
-//         var resourses = {
+        
+
+//         var opts = {
+//             hostname: 'sheets.googleapis.com',
+//             port: 443,
+//             path: `/v4/spreadsheets/${SHEET_ID}/values/!A1:D5?valueInputOption=USER_ENTERED`,
+//             method: 'PUT',
+//             resourses :resourses,
+//             headers: {
+//                 'Authorization': `Bearer ${tokens.access_token}`
+//             }
+//         };
+//         var req = https.request(opts, (res) => {
+//         	//console.log(res.payload);
+//             var store = '';
+//             res.on('data', (chunk) => store = store + chunk);
+//             res.on('end', () => console.log('store', store));
+//         });
+
+// var resourses = {
 //   "range": "Sheet1!A1:D5",
-//   "majorDimension": "ROWS",
+//   "majorDimension": "USER_ENTERED",
 //   "values": [
 //     ["Item", "Cost", "Stocked", "Ship Date"],
 //     ["Wheel", "$20.50", "4", "3/1/2016"],
@@ -50,25 +67,12 @@ module.exports = {
 //     ["Totals", "=SUM(B2:B4)", "=SUM(C2:C4)", "=MAX(D2:D4)"]
 //   ],
 // }
-
-//         var opts = {
-//             hostname: 'sheets.googleapis.com',
-//             port: 443,
-//             path: `/v4/spreadsheets/${SHEET_ID}/values/!A1:D5?valueInputOption=RAW`,
-//             method: 'PUT',
-//             resourses :resourses,
-//             headers: {
-//                 'Authorization': `Bearer ${tokens.access_token}`
-//             }
-//         };
-//         var req = https.request(opts, (res) => {
-//         	console.log(res.payload);
-//             // var store = '';
-//             // res.on('data', (chunk) => store = store + chunk);
-//             // res.on('end', () => console.log('store', store));
-//         });
-
+// req.write(resourses);
 //         req.end();
 //     });
-//}
+// }
 
+module.exports = {
+    parseBody: parseBody,
+    //creatsheet : creatsheet
+};
