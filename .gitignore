@@ -1,2 +1,8 @@
+<<<<<<< HEAD
  node_modules
  key.json
+=======
+node_modules
+key.json
+coverage
+>>>>>>> 5908ac2e5496b5caa1558699cb315df0eb54a7d9
