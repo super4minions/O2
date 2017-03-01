@@ -1,5 +1,6 @@
 var fs = require('fs');
 var utils1 = require('../facebook-api/utils1');
+
 var send = require('../facebook-api/send.js');
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
     "POST /sheet": require("../google-sheet-api/sheet.js"),
     "GET /facebook": (req, res) => {
     var challenge = utils1.parseUrl(req.url);
-    console.log("RESSSSS",challenge['hub.challenge']);
+//     console.log("RESSSSS",challenge['hub.challenge']);
     res.end(challenge['hub.challenge']);
   },
   "POST /facebook": (req, res) => {
