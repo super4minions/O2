@@ -15,62 +15,59 @@ function parseBody(req, callback) {
 }
 
 
-// function creatsheet() {
-//     var https = require('https');
-//     var google = require('googleapis');
-//     var key = require('../key.json');
 
-//     var SHEET_ID = '1klLD4Wvfdb5fCwQUx0mbFqg2z1ZinuMZsTf5wO_YCgY';
+// var https = require('https');
+// var google = require('googleapis');
+// var key = require('../key.json');
 
-//     var jwtClient = new google.auth.JWT(
-//         key.client_email,
-//         null,
-//         key.private_key, ['https://www.googleapis.com/auth/spreadsheets'],
-//         null
-//     );
+// var SHEET_ID = '1klLD4Wvfdb5fCwQUx0mbFqg2z1ZinuMZsTf5wO_YCgY';
 
-//     jwtClient.authorize((err, tokens) => {
-//         //console.log(tokens);
-//         if (err) {
-//             console.log(err);
+// var jwtClient = new google.auth.JWT(
+//     key.client_email,
+//     null,
+//     key.private_key, ['https://www.googleapis.com/auth/spreadsheets'],
+//     null
+// );
 
-//             return;
+// jwtClient.authorize((err, tokens) => {
+//     //console.log(tokens);
+//     if (err) {
+//         console.log(err);
+
+//         return;
+//     }
+
+
+
+//     var opts = {
+//         hostname: 'sheets.googleapis.com',
+//         port: 443,
+//         path: `/v4/spreadsheets/${SHEET_ID}/values/append?valueInputOption=USER_ENTERED`,
+//         method: 'POST',
+//         headers: {
+//             'Authorization': `Bearer ${tokens.access_token}`
 //         }
-
-        
-
-//         var opts = {
-//             hostname: 'sheets.googleapis.com',
-//             port: 443,
-//             path: `/v4/spreadsheets/${SHEET_ID}/values/!A1:D5?valueInputOption=USER_ENTERED`,
-//             method: 'PUT',
-//             resourses :resourses,
-//             headers: {
-//                 'Authorization': `Bearer ${tokens.access_token}`
-//             }
-//         };
-//         var req = https.request(opts, (res) => {
-//         	//console.log(res.payload);
-//             var store = '';
-//             res.on('data', (chunk) => store = store + chunk);
-//             res.on('end', () => console.log('store', store));
-//         });
-
-// var resourses = {
-//   "range": "Sheet1!A1:D5",
-//   "majorDimension": "USER_ENTERED",
-//   "values": [
-//     ["Item", "Cost", "Stocked", "Ship Date"],
-//     ["Wheel", "$20.50", "4", "3/1/2016"],
-//     ["Door", "$15", "2", "3/15/2016"],
-//     ["Engine", "$100", "1", "30/20/2016"],
-//     ["Totals", "=SUM(B2:B4)", "=SUM(C2:C4)", "=MAX(D2:D4)"]
-//   ],
-// }
-// req.write(resourses);
-//         req.end();
+//     };
+//     var req = https.request(opts, (res) => {
+//         //console.log(res.payload);
+//         var store = '';
+//         res.on('data', (chunk) => store = store + chunk);
+//         res.on('end', () => console.log('store', store));
 //     });
-// }
+
+//     var d = '{  "range": "",\
+//   "majorDimension": "USER_ENTERED",\
+//   "values": [\
+//     ["Item", "Cost", "Stocked", "Ship Date"],\
+//     ["aa", "$222.50", "0", "3/1/2016"],\
+//     ["z", "$15", "2", "3/15/2016"],\
+//     ["Eaaaangine", "$100", "1", "30/20/2016"],\
+//     ["Total2222s", "=SUM(B2:B4)", "=SUM(C2:C4)", "=MAX(D2:D4)"]\
+//   ], }'
+//     req.write(d);
+//     req.end();
+// });
+
 
 module.exports = {
     parseBody: parseBody,
