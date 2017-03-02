@@ -1,10 +1,19 @@
 //require('dotenv').config();
 var https = require('https');
 var utils1 = require('./utils1.js');
+var write = require('../google-sheet-api/utils.js');
 
 module.exports = function(fbid){
-var key = Math.floor((Math.random() * 100000) + 1);;
-
+var key = Math.floor((Math.random() * 100000) + 1);
+var source = {
+    "range": "Sheet1",
+    "majorDimension": "ROWS",
+    "values": [
+        [fbid, key]
+    ]
+}
+write.writesheet(JSON.stringify(source));
+console.log(source);
 var postData = JSON.stringify({
   recipient:{id:fbid},
   "message":{
