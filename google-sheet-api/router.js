@@ -15,24 +15,27 @@ module.exports = {
         res.end(challenge['hub.challenge']);
     },
     "POST /facebook": (req, res) => {
-        utils1.parseBody(req, (err, payload) => {
-            if (err) {
-                console.log('err parsing body', err);
-                return res.end('Error');
-            }
-            var message = payload.entry[0].messaging[0].message.text;
-            var user_id = payload.entry[0].messaging[0].sender.id;
+    utils1.parseBody(req, (err,payload) => {
+      var message = payload.entry[0].messaging[0].message.text;
+      var user_id = payload.entry[0].messaging[0].sender.id;
+      if(err) {
+        console.log('err',err);
+        return res.end('Error');
+      }else if (message == "bootcamp") {
+        console.log("Welcome to bootcamp");
+        send(user_id,function (err,data) {
+          write.writesheet(JSON.stringify(data),function (err,res) {
 
-            if (message === "bootcamp") {
-                console.log("Welcome to bootcamp");
-                send(user_id, function(err, data) {
-                    
+          })
 
-                    
-                });
-            } else {
-              res.end("ALAAAAA");
-            }
         });
-    }
+
+
+      }
+      // console.log('JSON.stringify(payload)',JSON.stringify(payload.entry));
+      //
+      // console.log('bes',payload.entry[0].messaging[0].message.text);
+      res.end();
+    });
+  }
 }
