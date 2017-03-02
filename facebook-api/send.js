@@ -4,6 +4,7 @@ var utils1 = require('./utils1.js');
 var write = require('../google-sheet-api/utils.js');
 
 module.exports = function(fbid){
+
 var key = Math.floor((Math.random() * 100000) + 1);
 var source = {
     "range": "Sheet1",
@@ -27,12 +28,12 @@ var postData = JSON.stringify({
             "type":"web_url",
             "url":"https://docs.google.com/forms/d/e/1FAIpQLSdMW42u_uLkOLQLguE94e89V1NJ0lFFzCdWG1M0hXR9lUvGvQ/viewform",
             "title":"Apply Now"
+
           }
-        ]
+        }
       }
-    }
-  }
-});
+    });
+  // }
 
 var opts = {
   hostname: 'graph.facebook.com',
