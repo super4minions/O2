@@ -10,6 +10,7 @@ module.exports = {
     res.end();
   },
     "GET /": require("../google-sheet-api/index.js"),
+    //"GET /facebook" : require('../app')}
     "POST /sheet": require("../google-sheet-api/sheet.js"),
     "GET /facebook": (req, res) => {
     var challenge = utils1.parseUrl(req.url);
