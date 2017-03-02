@@ -1,7 +1,6 @@
 require('dotenv').config();
 var https = require('https');
 var google = require('googleapis');
-var key = require('../key.json');
 var qs = require('querystring');
 var SHEET_ID = '1FzHsFg0mQaN80zVyZug6Q_CyuA_q18w_hVXXyaFqUok';
 
