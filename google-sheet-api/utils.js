@@ -49,7 +49,6 @@ function writesheet(source) {
             }
         };
         var req = https.request(opts, (res) => {});
-        console.log(source);
         req.write(source);
         req.end();
     });
