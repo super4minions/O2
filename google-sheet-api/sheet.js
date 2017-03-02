@@ -6,7 +6,7 @@ module.exports = function(req, res) {
         //data.values[0][2] = id;
         console.log("sheet", data);
         utils.writesheet(JSON.stringify(data));
-        res.end("To confirm your submition you shoud send message " + id + "(Your are in our bootcamp) to this page https://www.facebook.com/Test-API-1737409489904164/ ");
+        res.end("To confirm your submition you shoud send message ( bootcamp) to this page https://www.facebook.com/Test-API-1737409489904164/ ");
 
     });
 
