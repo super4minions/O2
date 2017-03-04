@@ -6,8 +6,8 @@
   "scripts": {
     "test": "node tests/runner.js",
     "start": "node server.js",
-    "dev:test": "nodemon tests/runner.js"
-
+    "dev:test": "nodemon tests/runner.js",
+    "cov": "./node_modules/.bin/istanbul cover tests/main.test.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,8 @@
     "nodemon": "^1.11.0",
     "shot": "^3.4.0",
     "tape": "^4.6.3"
+  },
+  "directories": {
+    "test": "tests"
   }
 }

@@ -1,36 +1,41 @@
 var fs = require('fs');
 var utils1 = require('../facebook-api/utils1');
 var send = require('../facebook-api/send.js');
+// var utils1 = require('./utils1.js');
+var write = require('../google-sheet-api/utils.js');
+require('dotenv').config();
+var qs = require('querystring');
+var https = require('https');
+var google = require('googleapis');
 
+var source;
 module.exports = {
-  'GET /style.css':function (req, res) {
-    res.writeHead(200, {'Content-type' : 'text/css'});
-    var fileContents = fs.readFileSync('./front-end/style.css', {encoding: 'utf8'});
-    res.write(fileContents);
-    res.end();
-  },
-    "GET /": require("../google-sheet-api/index.js"),
-    "POST /sheet": require("../google-sheet-api/sheet.js"),
     "GET /facebook": (req, res) => {
-    var challenge = utils1.parseUrl(req.url);
-    res.end(challenge['hub.challenge']);
-  },
-  "POST /facebook": (req, res) => {
+        var challenge = utils1.parseUrl(req.url);
+        res.end(challenge['hub.challenge']);
+    },
+    "POST /facebook": (req, res) => {
     utils1.parseBody(req, (err,payload) => {
       var message = payload.entry[0].messaging[0].message.text;
       var user_id = payload.entry[0].messaging[0].sender.id;
+      console.log("message:",message);
+      console.log("user_id:",user_id);
       if(err) {
         console.log('err',err);
         return res.end('Error');
-<<<<<<< HEAD
-      }      
-      console.log('bes',payload.entry[0].messaging[0].message.text);
-=======
+
       }else if (message == "bootcamp") {
         console.log("Welcome to bootcamp");
-        send(user_id);
+        send(user_id,function (err,data) {
+          write.writesheet(JSON.stringify(data),function (err,res) {
+
+          })
+
+        });
+
+
       }
->>>>>>> c17dd6c99960fb9ce89681641ed57f6e018d19db
+
       res.end();
     });
   }

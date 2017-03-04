@@ -1,8 +1,5 @@
 node_modules
 key.json
-<<<<<<< HEAD
-coverage
-=======
 coverage
 .env
->>>>>>> c17dd6c99960fb9ce89681641ed57f6e018d19db
+npm-debug.log
