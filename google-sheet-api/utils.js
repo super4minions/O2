@@ -1,7 +1,8 @@
+require('dotenv').config();
 var qs = require('querystring');
 var https = require('https');
 var google = require('googleapis');
-var key = require('../key.json');
+
 var id=0;
 function parseBody(req, callback) {
     var body = '';
@@ -12,8 +13,8 @@ function parseBody(req, callback) {
     req.on('end', function() {
     	var id1 = JSON.stringify(id);
         var body1 = qs.parse(body);
-        
-        
+
+
         var source = {
             "range": "Sheet1",
             "majorDimension": "ROWS",
@@ -27,9 +28,9 @@ function parseBody(req, callback) {
 
 function writesheet(source) {
     var jwtClient = new google.auth.JWT(
-        key.client_email,
+        process.env.CLIENT_EMAIL,
         null,
-        key.private_key, ['https://www.googleapis.com/auth/spreadsheets'],
+        process.env.PRIVATE_KEY, ['https://www.googleapis.com/auth/spreadsheets'],
         null
     );
 

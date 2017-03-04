@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/super4minions/O2#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "googleapis": "^17.1.0"
   },
   "devDependencies": {
